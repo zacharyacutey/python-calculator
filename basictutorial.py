@@ -32,15 +32,15 @@ def calculate(operator=None, *args):
         print("You must have entered the wrong information.  Please try again. \n\n")
         calculator()
 
-    print(total)
+    return(total)
 
 def calculator():
     operator = input("What would you like to do?  ").lower().strip()
-    numbers = input("Which numbers would you like to {0}?  ".format(operator))
+    numbers = input("Which numbers would you like to {}?  ".format(operator))
 
     numbers = [int(x.strip()) for x in numbers.split(",")]
 
-    calculate(operator, *numbers)
+    print("If you {} {} by {} it equals: ".format(operator, numbers[0], tuple(numbers[1:])), calculate(operator, *numbers))
 
 
 # Examples:
