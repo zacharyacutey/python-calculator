@@ -1,28 +1,28 @@
 def calculate(operator=None, *args):
-    if operator is "add":
+    if operator == "add":
         total = 0 #starts out at zero and adds or subtracts
 
         for addends in args:
             total += addends
 
-    elif operator is "multiply":
+    elif operator == "multiply":
         total = 1 #starts at 1 because the beginning value has to be the first number in args
 
         for factors in args:
             total = total * factors
 
-    elif operator is "subtract" or operator is "divide":
+    elif operator == "subtract" or operator == "divide":
         total = args[0] #Makes the total number the first number given and is then manipulated
 
-        if operator is "subtract":
+        if operator == "subtract":
             for subtrahends in args[1:]:
                 total -= subtrahends
 
-        if operator is "divide":
+        if operator == "divide":
             for dividends in args[1:]:
                 total = total / dividends
 
-    elif operator is None:
+    elif operator == None:
         print("You didn't enter anything!")
         calculator()
 
