@@ -24,6 +24,7 @@ def calculate(operator=None, *args):
 
     elif operator is None:
         print("You didn't enter anything!")
+        calculator()
 
     else:
         print(operator)
