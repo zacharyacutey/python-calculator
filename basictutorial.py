@@ -32,7 +32,7 @@ def calculate(operator=None, *args):
         print("You must have entered the wrong information.  Please try again. \n\n")
         calculator()
 
-    return(total)
+    return total
 
 def calculator():
     operator = input("What would you like to do?  ").lower().strip()
